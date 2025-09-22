@@ -14,8 +14,8 @@
 ---
 
 ## Team information
-- Team name: 
-- Team members:
+- Team name: BitByBit
+- Team members: Nolan Graham, Yousef Hamid Uddin, Sriharish Eswarathas, Daniel Vargas, Ethan Ramos, Anthony Aabdulnour, Dusan Jovanovic, Rohan Rajesh
 
 ## Project management setup
 - With your assigned group, set-up a Team Project website on Trello(trello.com) to manage your project.

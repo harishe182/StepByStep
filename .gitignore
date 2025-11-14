@@ -1,2 +1,6 @@
 # Exclude environment variables file from Git commits
 .env
+
+# Ignore local student information JSON. Student files created by program will be
+# of the form "student_<student_name>.json"
+/src/backend/data/student_*.json

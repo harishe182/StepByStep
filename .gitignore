@@ -4,3 +4,29 @@
 # Ignore local student information JSON. Student files created by program will be
 # of the form "student_<student_name>.json"
 /src/backend/data/student_*.json
+
+# React frontend dependency files
+node_modules/
+*/node_modules/
+
+# Python byte-code files and virtual environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Common ignores
+.DS_Store
+Thumbs.db

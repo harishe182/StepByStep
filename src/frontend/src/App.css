@@ -1,0 +1,108 @@
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.quiz-table-container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quiz-table th {
+  background-color: var(--card-bg);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.quiz-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.quiz-table tr.even {
+  background-color: var(--card-bg);
+}
+
+.quiz-table tr.odd {
+  background-color: var(--bg-color);
+}
+
+/* Status badges using variables */
+:root {
+  --status-pass-bg: #dcfce7;
+  --status-pass-text: #166534;
+  --status-review-bg: #fee2e2;
+  --status-review-text: #991b1b;
+}
+
+[data-theme='dark'] {
+  --status-pass-bg: #166534;
+  --status-pass-text: #dcfce7;
+  --status-review-bg: #991b1b;
+  --status-review-text: #fee2e2;
+}
+
+[data-theme='high-contrast'] {
+  --status-pass-bg: #000000;
+  --status-pass-text: #00ff00;
+  --status-review-bg: #000000;
+  --status-review-text: #ff0000;
+}
+
+.status.passed {
+  background-color: var(--status-pass-bg);
+  color: var(--status-pass-text);
+}
+
+.status.review {
+  background-color: var(--status-review-bg);
+  color: var(--status-review-text);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+
+.settings-btn:hover {
+  color: #007bff;
+}
+
+
+
+
+

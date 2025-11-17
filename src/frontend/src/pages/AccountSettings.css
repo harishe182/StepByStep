@@ -1,0 +1,337 @@
+/* Theme variables */
+:root {
+  --bg-color: linear-gradient(to bottom right, #f9fbff, #f7fff9);
+  --text-color: #333;
+  --section-bg: white;
+  --section-shadow: rgba(0, 0, 0, 0.05);
+  --input-bg: #f9fafb;
+  --input-border: #ddd;
+  --label-color: #333;
+  --subtext-color: #666;
+  --button-bg: #6b8cff;
+  --button-text: white;
+  --icon-bg: #eef3ff;
+  --profile-icon-bg: #eaf2ff;
+  --profile-icon-color: #3b82f6;
+  --accessibility-icon-bg: #f3e8ff;
+  --accessibility-icon-color: #8b5cf6;
+  --learning-icon-bg: #fff7ed;
+  --learning-icon-color: #f59e0b;
+  --slider-bg: #ccc;
+  --slider-checked-bg: #6b8cff;
+  --slider-knob: white;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --section-bg: #1e1e1e;
+  --section-shadow: rgba(0, 0, 0, 0.3);
+  --input-bg: #2a2a2a;
+  --input-border: #444;
+  --label-color: #ffffff;
+  --subtext-color: #bbbbbb;
+  --button-bg: #3b82f6;
+  --button-text: #ffffff;
+  --icon-bg: #333;
+  --profile-icon-bg: #2a2a2a;
+  --profile-icon-color: #60a5fa;
+  --accessibility-icon-bg: #333;
+  --accessibility-icon-color: #a78bfa;
+  --learning-icon-bg: #333;
+  --learning-icon-color: #facc15;
+  --slider-bg: #555;
+  --slider-checked-bg: #3b82f6;
+  --slider-knob: #ffffff;
+}
+
+[data-theme='high-contrast'] {
+  --bg-color: #000000;
+  --text-color: #ffff00;
+  --section-bg: #000000;
+  --section-shadow: rgba(255, 255, 0, 0.2);
+  --input-bg: #000000;
+  --input-border: #ffff00;
+  --label-color: #ffff00;
+  --subtext-color: #ffff00;
+  --button-bg: #ffff00;
+  --button-text: #000000;
+  --icon-bg: #000000;
+  --profile-icon-bg: #000000;
+  --profile-icon-color: #ffff00;
+  --accessibility-icon-bg: #000000;
+  --accessibility-icon-color: #ffff00;
+  --learning-icon-bg: #000000;
+  --learning-icon-color: #ffff00;
+  --slider-bg: #ffff00;
+  --slider-checked-bg: #ffff00;
+  --slider-knob: #000000;
+}
+
+/* Container */
+.settings-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+/* Header */
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.save-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Section */
+.settings-section {
+  background: var(--section-bg);
+  border-radius: 14px;
+  box-shadow: 0 2px 6px var(--section-shadow);
+  padding: 20px 24px;
+  margin-bottom: 25px;
+}
+
+/* Section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--subtext-color);
+}
+
+/* Icons */
+.icon {
+  background: var(--icon-bg);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  background: var(--profile-icon-bg);
+  color: var(--profile-icon-color);
+}
+
+.accessibility-icon {
+  background: var(--accessibility-icon-bg);
+  color: var(--accessibility-icon-color);
+}
+
+.learning-icon {
+  background: var(--learning-icon-bg);
+  color: var(--learning-icon-color);
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--label-color);
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* Toggle Row */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.toggle-row h4 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.toggle-row p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--subtext-color);
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--slider-bg);
+  border-radius: 22px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--slider-knob);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: var(--slider-checked-bg);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+/* Learning Progress Cards */
+.progress-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.retake-card {
+  background: #e8f2ff; /* light blue */
+  border-left: 4px solid #5b9dff;
+}
+
+.reset-card {
+  background: #ffe8e8; /* light red/pink */
+  border-left: 4px solid #ff5b5b;
+}
+
+.retake-btn {
+  background: white;
+  border: 1px solid #5b9dff;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Make the card backgrounds respond to theme */
+.theme-card {
+  background: var(--card-bg, #f5f5f5);
+  color: var(--card-text, #000);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+  border: 1px solid var(--card-border, #ddd);
+}
+
+/* Keep your button look but theme-aware */
+.theme-btn {
+  background: var(--btn-bg, #007bff);
+  color: var(--btn-text, #fff);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.theme-btn:hover {
+  opacity: 0.85;
+}
+
+/* ----- DARK MODE ----- */
+[data-theme="dark"] {
+  --card-bg: #1f1f1f;
+  --card-text: #ffffff;
+  --card-border: #333;
+
+  --btn-bg: #444;
+  --btn-text: #fff;
+}
+
+/* ----- HIGH CONTRAST MODE ----- */
+[data-theme="high-contrast"] {
+  --card-bg: #000;
+  --card-text: #fff;
+  --card-border: #fff;
+
+  --btn-bg: #ffea00;
+  --btn-text: #000;
+}
+
+

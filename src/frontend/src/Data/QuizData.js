@@ -6,6 +6,12 @@ export const quizData = [
     score: "1/4",
     percentage: 25,
     status: "Review",
+    questions: [
+      { id: 1, correct: true, expectedAnswer: "a" },
+      { id: 2, correct: false, expectedAnswer: "b" },
+      { id: 3, correct: false, expectedAnswer: "c" },
+      { id: 4, correct: false, expectedAnswer: "d" },
+    ],
   },
   {
     date: "2025-10-26",
@@ -14,6 +20,13 @@ export const quizData = [
     score: "3/5",
     percentage: 60,
     status: "Review",
+    questions: [
+      { id: 1, correct: true, expectedAnswer: "b" },
+      { id: 2, correct: true, expectedAnswer: "a" },
+      { id: 3, correct: false, expectedAnswer: "d" },
+      { id: 4, correct: true, expectedAnswer: "c" },
+      { id: 5, correct: false, expectedAnswer: "b" },
+    ],
   },
   {
     date: "2025-10-27",
@@ -22,6 +35,18 @@ export const quizData = [
     score: "8/10",
     percentage: 80,
     status: "Passed",
+    questions: [
+      { id: 1, correct: true, expectedAnswer: "a" },
+      { id: 2, correct: true, expectedAnswer: "b" },
+      { id: 3, correct: true, expectedAnswer: "c" },
+      { id: 4, correct: true, expectedAnswer: "d" },
+      { id: 5, correct: true, expectedAnswer: "a" },
+      { id: 6, correct: true, expectedAnswer: "b" },
+      { id: 7, correct: true, expectedAnswer: "c" },
+      { id: 8, correct: true, expectedAnswer: "d" },
+      { id: 9, correct: false, expectedAnswer: "e" },
+      { id: 10, correct: false, expectedAnswer: "a" },
+    ],
   },
   {
     date: "2025-10-28",
@@ -30,5 +55,18 @@ export const quizData = [
     score: "10/10",
     percentage: 100,
     status: "Passed",
+    questions: [
+      { id: 1, correct: true, expectedAnswer: "a" },
+      { id: 2, correct: true, expectedAnswer: "b" },
+      { id: 3, correct: true, expectedAnswer: "c" },
+      { id: 4, correct: true, expectedAnswer: "d" },
+      { id: 5, correct: true, expectedAnswer: "a" },
+      { id: 6, correct: true, expectedAnswer: "b" },
+      { id: 7, correct: true, expectedAnswer: "c" },
+      { id: 8, correct: true, expectedAnswer: "d" },
+      { id: 9, correct: true, expectedAnswer: "e" },
+      { id: 10, correct: true, expectedAnswer: "a" },
+    ],
   },
 ];
+

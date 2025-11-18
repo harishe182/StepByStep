@@ -12,6 +12,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Subtract 7 from both sides to get x = 15 - 7 = 8.",
+      hint: "What number plus 7 equals 15?",
     },
     {
       id: "alg1-mq2",
@@ -25,6 +26,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "3(-2) = -6.",
+      hint: "Multiply -2 by 3, keeping the negative sign.",
     },
     {
       id: "alg1-mq3",
@@ -38,6 +40,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "4y - y = 3y, so 3y + 6.",
+      hint: "Only combine the terms with y together.",
     },
     {
       id: "alg1-mq4",
@@ -51,6 +54,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Divide both sides by 5 to get x = 4.",
+      hint: "Undo multiplication by dividing by the same number.",
     },
     {
       id: "alg1-mq5",
@@ -64,6 +68,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Greater than or equal to corresponds to ≥.",
+      hint: "Remember: the underline under > means 'or equal to'.",
     },
   ],
   "linear-functions": [
@@ -79,6 +84,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "In y = mx + b, m = 4.",
+      hint: "Compare the equation to y = mx + b and read off m.",
     },
     {
       id: "lin-mq2",
@@ -92,6 +98,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "When x = 0, y = 3, so intercept is (0, 3).",
+      hint: "Set x equal to zero to find the y-intercept.",
     },
     {
       id: "lin-mq3",
@@ -105,6 +112,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Slope = (6 - 2)/(3 - 1) = 4/2 = 2.",
+      hint: "Use rise over run: change in y divided by change in x.",
     },
     {
       id: "lin-mq4",
@@ -118,6 +126,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Negative slope indicates decreasing; slope of -1.",
+      hint: "Decreasing lines have negative slope.",
     },
     {
       id: "lin-mq5",
@@ -131,6 +140,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Slope 1 and intercept 2 => y = x + 2.",
+      hint: "Point (0,2) tells you the y-intercept.",
     },
   ],
   "quadratic-modeling": [
@@ -146,6 +156,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Set each factor to zero: x = 1 or x = 5.",
+      hint: "For factored form, set each factor equal to zero.",
     },
     {
       id: "quad-mq2",
@@ -159,6 +170,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Negative coefficient on x^2 makes it open downward.",
+      hint: "Look at the sign of the x^2 coefficient.",
     },
     {
       id: "quad-mq3",
@@ -172,6 +184,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "(-2)^2 - 4 = 4 - 4 = 0.",
+      hint: "Square -2 first, then subtract 4.",
     },
     {
       id: "quad-mq4",
@@ -185,6 +198,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Half of 6 is 3 and 3^2 = 9, so (x + 3)^2.",
+      hint: "Take half of the linear coefficient before squaring.",
     },
     {
       id: "quad-mq5",
@@ -198,6 +212,7 @@ const miniQuizQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Axis is x = -b/(2a) = 8 / 2 = 4.",
+      hint: "Use -b/(2a) for the axis of symmetry.",
     },
   ],
 };

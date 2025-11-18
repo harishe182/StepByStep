@@ -12,6 +12,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Add 5 to get 4x = 16, then divide by 4.",
+      hint: "Reverse the operations in the opposite order they were applied.",
     },
     {
       id: "alg1-ut2",
@@ -25,6 +26,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "d",
       explanation: "Divide both sides by 2 to get x - 3 = 5, then add 3.",
+      hint: "First divide out the 2, then undo the subtraction.",
     },
     {
       id: "alg1-ut3",
@@ -38,6 +40,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Subtract 3x to get 2x + 2 = 10, so 2x = 8 and x = 4.",
+      hint: "Move the x terms to one side before solving.",
     },
     {
       id: "alg1-ut4",
@@ -51,6 +54,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "-3x = -9 so x = 3.",
+      hint: "Get x alone by dividing both sides by -3.",
     },
     {
       id: "alg1-ut5",
@@ -64,6 +68,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Expand to 3x + 6 + 2x - 2 = 5x + 4.",
+      hint: "Distribute each coefficient before combining like terms.",
     },
     {
       id: "alg1-ut6",
@@ -77,6 +82,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Twice a number is 2n; plus 7 gives 2n + 7.",
+      hint: "Translate 'twice a number' to 2n first.",
     },
     {
       id: "alg1-ut7",
@@ -90,6 +96,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Add 1 (2x > 6) then divide by 2 to get x > 3.",
+      hint: "Treat inequalities like equations—just keep the direction the same when dividing by a positive number.",
     },
     {
       id: "alg1-ut8",
@@ -103,6 +110,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "(-1)^2 + 2(-1) = 1 - 2 = -1.",
+      hint: "Square -1 first, then add 2 times -1.",
     },
     {
       id: "alg1-ut9",
@@ -116,6 +124,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Multiplying 4 across 3x applies the distributive property.",
+      hint: "Think about which property lets you multiply across parentheses.",
     },
     {
       id: "alg1-ut10",
@@ -129,6 +138,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Expand: y - 4 = 2x + 2, then add 4 to get y = 2x + 6.",
+      hint: "Distribute first, then isolate y.",
     },
   ],
   "linear-functions": [
@@ -144,6 +154,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Slope = (9 - 3)/(5 - 2) = 6/3 = 2.",
+      hint: "Use rise over run with the two points.",
     },
     {
       id: "lin-ut2",
@@ -157,6 +168,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Set x = 0 to get y = 1.",
+      hint: "The y-intercept occurs where x = 0.",
     },
     {
       id: "lin-ut3",
@@ -170,6 +182,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Slope-intercept form y = mx + b with b = -2.",
+      hint: "Use y = mx + b and plug in the given point.",
     },
     {
       id: "lin-ut4",
@@ -183,6 +196,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Set y = 0 → 0 = 2x - 6, so x = 3.",
+      hint: "For the x-intercept, set y equal to zero.",
     },
     {
       id: "lin-ut5",
@@ -196,6 +210,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "-0.5(6) + 4 = -3 + 4 = 1.",
+      hint: "Multiply the slope by x, then add the intercept.",
     },
     {
       id: "lin-ut6",
@@ -210,6 +225,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "They have equal slopes (2) and different intercepts.",
+      hint: "Parallel lines share the same slope.",
     },
     {
       id: "lin-ut7",
@@ -223,6 +239,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "d",
       explanation: "Perpendicular slope is the negative reciprocal: -2.",
+      hint: "Flip the slope and change the sign to find a perpendicular slope.",
     },
     {
       id: "lin-ut8",
@@ -236,6 +253,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Solve for y: 3y = -2x + 6 → y = -2/3 x + 2.",
+      hint: "Isolate y by moving everything else to the other side.",
     },
     {
       id: "lin-ut9",
@@ -249,6 +267,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Plugging in gives y = 9, matching the point.",
+      hint: "Substitute x = 2 into the equation to see if y = 9.",
     },
     {
       id: "lin-ut10",
@@ -263,6 +282,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Rate of change = (9 - 1)/(4 - 0) = 8/4 = 2.",
+      hint: "Average rate of change is the slope between the two points.",
     },
   ],
   "quadratic-modeling": [
@@ -278,6 +298,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Difference of squares factors as (x - 3)(x + 3).",
+      hint: "Recognize a^2 - b^2 = (a - b)(a + b).",
     },
     {
       id: "quad-ut2",
@@ -291,6 +312,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Vertex form gives (h, k) = (2, 5).",
+      hint: "In (x - h)^2 + k, the vertex is (h, k).",
     },
     {
       id: "quad-ut3",
@@ -304,6 +326,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Factors to (x + 2)^2, so x = -2 twice.",
+      hint: "Look for a perfect square trinomial.",
     },
     {
       id: "quad-ut4",
@@ -317,6 +340,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "-1 + 6 - 5 = 0.",
+      hint: "Substitute x = 1 carefully, keeping track of the negative sign on x^2.",
     },
     {
       id: "quad-ut5",
@@ -330,6 +354,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Axis is x = -b/(2a) = 6/2 = 3.",
+      hint: "Use -b/(2a) to find the axis of symmetry.",
     },
     {
       id: "quad-ut6",
@@ -343,6 +368,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "b^2 - 4ac = (-4)^2 - 4(1)(4) = 16 - 16 = 0.",
+      hint: "Plug a, b, and c into b^2 - 4ac.",
     },
     {
       id: "quad-ut7",
@@ -356,6 +382,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Zero product property gives x = 0 or x = 5.",
+      hint: "Set each factor equal to zero.",
     },
     {
       id: "quad-ut8",
@@ -369,6 +396,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "The sign of a controls the opening direction.",
+      hint: "Compare the coefficient of x^2 to zero.",
     },
     {
       id: "quad-ut9",
@@ -382,6 +410,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Factors to (x - 3)(x + 2) = 0.",
+      hint: "Find two numbers that multiply to -6 and add to -1.",
     },
     {
       id: "quad-ut10",
@@ -395,6 +424,7 @@ const unitTestQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Plugging x = 0 gives y = 6.",
+      hint: "Set x = 0 to find the y-intercept quickly.",
     },
   ],
 };

@@ -17,6 +17,7 @@ export default function MiniQuiz() {
   const [loadingNext, setLoadingNext] = useState(false);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -28,6 +29,7 @@ export default function MiniQuiz() {
     setLoadingNext(false);
     setScore(0);
     setIsComplete(false);
+    setShowHint(false);
   }, [unitId]);
 
   const currentQuestion = useMemo(() => {
@@ -99,6 +101,7 @@ export default function MiniQuiz() {
     setHasSubmitted(false);
     setIsCorrect(null);
     setFeedbackMessage("");
+    setShowHint(false);
   };
 
   const handleNextQuestion = () => {
@@ -114,6 +117,10 @@ export default function MiniQuiz() {
     setLoadingNext(false);
   };
 
+  const handleShowHint = () => {
+    setShowHint(true);
+  };
+
   const handleRestart = () => {
     setCurrentIndex(0);
     setSelectedChoiceId(null);
@@ -124,6 +131,7 @@ export default function MiniQuiz() {
     setLoadingNext(false);
     setScore(0);
     setIsComplete(false);
+    setShowHint(false);
   };
 
   const scorePercent = Math.round((score / questionCount) * 100);
@@ -200,6 +208,24 @@ export default function MiniQuiz() {
                   );
                 })}
               </div>
+              {currentQuestion.hint && (
+                <div className="hint-section">
+                  {!showHint ? (
+                    <button
+                      type="button"
+                      className="hint-btn"
+                      onClick={handleShowHint}
+                    >
+                      Show hint
+                    </button>
+                  ) : (
+                    <div className="hint-box">
+                      <p className="hint-label">Hint</p>
+                      <p className="hint-text">{currentQuestion.hint}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 

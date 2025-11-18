@@ -17,6 +17,7 @@ export default function UnitTest() {
   const [loadingNext, setLoadingNext] = useState(false);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -28,6 +29,7 @@ export default function UnitTest() {
     setLoadingNext(false);
     setScore(0);
     setIsComplete(false);
+    setShowHint(false);
   }, [unitId]);
 
   const currentQuestion = useMemo(() => {
@@ -99,6 +101,7 @@ export default function UnitTest() {
     setHasSubmitted(false);
     setIsCorrect(null);
     setFeedbackMessage("");
+    setShowHint(false);
   };
 
   const handleNextQuestion = () => {
@@ -124,6 +127,11 @@ export default function UnitTest() {
     setLoadingNext(false);
     setScore(0);
     setIsComplete(false);
+    setShowHint(false);
+  };
+
+  const handleShowHint = () => {
+    setShowHint(true);
   };
 
   const scorePercent = Math.round((score / questionCount) * 100);
@@ -200,6 +208,24 @@ export default function UnitTest() {
                   );
                 })}
               </div>
+              {currentQuestion.hint && (
+                <div className="hint-section">
+                  {!showHint ? (
+                    <button
+                      type="button"
+                      className="hint-btn"
+                      onClick={handleShowHint}
+                    >
+                      Show hint
+                    </button>
+                  ) : (
+                    <div className="hint-box">
+                      <p className="hint-label">Hint</p>
+                      <p className="hint-text">{currentQuestion.hint}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 

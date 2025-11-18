@@ -16,6 +16,7 @@ export default function Practice() {
   const [loadingSubmit, setLoadingSubmit] = useState(false);
   const [loadingNext, setLoadingNext] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -26,6 +27,7 @@ export default function Practice() {
     setLoadingSubmit(false);
     setLoadingNext(false);
     setIsComplete(false);
+    setShowHint(false);
   }, [unitId]);
 
   const currentQuestion = useMemo(() => {
@@ -73,6 +75,10 @@ export default function Practice() {
     setSelectedChoiceId(choiceId);
   };
 
+  const handleShowHint = () => {
+    setShowHint(true);
+  };
+
   const handleSubmit = () => {
     if (!currentQuestion || loadingSubmit || selectedChoiceId === null) return;
     setLoadingSubmit(true);
@@ -92,6 +98,7 @@ export default function Practice() {
     setHasSubmitted(false);
     setIsCorrect(null);
     setFeedbackMessage("");
+    setShowHint(false);
   };
 
   const handleNextQuestion = () => {
@@ -180,6 +187,24 @@ export default function Practice() {
                   );
                 })}
               </div>
+              {currentQuestion.hint && (
+                <div className="hint-section">
+                  {!showHint ? (
+                    <button
+                      type="button"
+                      className="hint-btn"
+                      onClick={handleShowHint}
+                    >
+                      Show hint
+                    </button>
+                  ) : (
+                    <div className="hint-box">
+                      <p className="hint-label">Hint</p>
+                      <p className="hint-text">{currentQuestion.hint}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 

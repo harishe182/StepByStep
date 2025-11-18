@@ -12,6 +12,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Subtract 3 to get 2x = 8, then divide by 2 to find x = 4.",
+      hint: "Undo the +3 first, then deal with the coefficient on x.",
     },
     {
       id: "alg1-q2",
@@ -25,6 +26,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Add 5 to get 3x = 21, then divide by 3 to find x = 7.",
+      hint: "Isolate the x term before dividing.",
     },
     {
       id: "alg1-q3",
@@ -38,6 +40,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "Combine like terms: 5x + 2x = 7x, so expression is 7x - 4.",
+      hint: "Group the x terms together before handling the constant.",
     },
     {
       id: "alg1-q4",
@@ -51,6 +54,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "4(-2) - 1 = -8 - 1 = -9.",
+      hint: "Substitute x = -2 carefully and watch the negative signs.",
     },
     {
       id: "alg1-q5",
@@ -64,6 +68,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Twice a number is 2y and adding five gives 2y + 5.",
+      hint: "Translate the words piece by piece: twice a number, then add 5.",
     },
   ],
   "linear-functions": [
@@ -80,6 +85,7 @@ const practiceQuestionsByUnit = {
       correctChoiceId: "a",
       explanation:
         "Slope = (13 - 5) / (6 - 2) = 8 / 4 = 2.",
+      hint: "Slope is rise over run: change in y divided by change in x.",
     },
     {
       id: "lin-q2",
@@ -93,6 +99,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Slope-intercept form is y = mx + b, so y = -3x + 4.",
+      hint: "Match the slope and intercept to y = mx + b.",
     },
     {
       id: "lin-q3",
@@ -106,6 +113,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "Shifting up 3 units adds 3 to the output, so f(x) = 2x + 4.",
+      hint: "Adding a constant outside the function moves it vertically.",
     },
     {
       id: "lin-q4",
@@ -119,6 +127,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "b",
       explanation: "In y = mx + b, m = -1/2 and b = 6.",
+      hint: "Identify m and b directly from the equation.",
     },
     {
       id: "lin-q5",
@@ -133,6 +142,7 @@ const practiceQuestionsByUnit = {
       correctChoiceId: "a",
       explanation:
         "Set x = 0: -2y = 8, so y = -4 and the intercept is (0, -4).",
+      hint: "Find the y-intercept by plugging x = 0.",
     },
   ],
   "quadratic-modeling": [
@@ -148,6 +158,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "a",
       explanation: "2 and 3 multiply to 6 and add to 5, so (x + 2)(x + 3).",
+      hint: "Look for two numbers that multiply to 6 and add to 5.",
     },
     {
       id: "quad-q2",
@@ -162,6 +173,7 @@ const practiceQuestionsByUnit = {
       correctChoiceId: "a",
       explanation:
         "In vertex form y = (x - h)^2 + k, the vertex is (h, k) = (4, -3).",
+      hint: "Vertex form makes the vertex visible as (h, k).",
     },
     {
       id: "quad-q3",
@@ -175,6 +187,7 @@ const practiceQuestionsByUnit = {
       ],
       correctChoiceId: "c",
       explanation: "Add 9 and take square roots to get x = ±3.",
+      hint: "Isolate x^2 before taking the square root of both sides.",
     },
     {
       id: "quad-q4",
@@ -189,6 +202,7 @@ const practiceQuestionsByUnit = {
       correctChoiceId: "a",
       explanation:
         "When a < 0 in y = ax^2 + bx + c, the parabola opens downward.",
+      hint: "Check the coefficient in front of x^2.",
     },
     {
       id: "quad-q5",
@@ -203,6 +217,7 @@ const practiceQuestionsByUnit = {
       correctChoiceId: "b",
       explanation:
         "The quadratic factors to (x + 2)^2, so x = -2 is a repeated root.",
+      hint: "Does the expression look like a perfect square trinomial?",
     },
   ],
 };

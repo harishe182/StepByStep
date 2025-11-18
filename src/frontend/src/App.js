@@ -2,6 +2,14 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import QuizHistory from "./pages/QuizHistory";
 import AccountSettings from "./pages/AccountSettings";
+import Units from "./pages/Units";
+import UnitDetail from "./pages/UnitDetail";
+import Diagnostic from "./pages/Diagnostic";
+import Practice from "./pages/Practice";
+import MiniQuiz from "./pages/MiniQuiz";
+import UnitTest from "./pages/UnitTest";
+import MainNav from "./Components/MainNav";
+import "./App.css";
 
 export default function App() {
   useEffect(() => {
@@ -15,14 +23,23 @@ export default function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<QuizHistory />} />
-      <Route path="/settings" element={<AccountSettings />} />
-    </Routes>
+    <div className="app-shell">
+      <MainNav />
+      <main className="app-main">
+        <Routes>
+          <Route path="/" element={<QuizHistory />} />
+          <Route path="/settings" element={<AccountSettings />} />
+          <Route path="/units" element={<Units />} />
+          <Route path="/units/:unitId" element={<UnitDetail />} />
+          <Route path="/units/:unitId/diagnostic" element={<Diagnostic />} />
+          <Route path="/units/:unitId/practice" element={<Practice />} />
+          <Route path="/units/:unitId/mini-quiz" element={<MiniQuiz />} />
+          <Route path="/units/:unitId/unit-test" element={<UnitTest />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
-
-
 
 
 

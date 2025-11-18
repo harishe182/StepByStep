@@ -513,11 +513,13 @@ body {
   margin: 0.3rem 0;
 }
 
-.practice-complete {
+.practice-complete,
+.assessment-summary {
   text-align: left;
 }
 
-.practice-complete-actions {
+.practice-complete-actions,
+.assessment-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -540,4 +542,3 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
-

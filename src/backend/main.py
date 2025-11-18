@@ -13,24 +13,33 @@ DATA_DIR = 'data'
 DOMAIN_FILE = os.path.join(DATA_DIR, 'domain.json')
 
 # --- Helper functions for API endpoints ---
-def student_exists(name):
+def student_exists(name: str) -> bool:
     """ Check if JSON file with student name already exists in data directory. 
         Used before loading student data or creating new student. """
-    return
+    file_path = os.path.join(DATA_DIR, f"student_{name}.json")
+    if os.path.exists(file_path):
+        return True
+    return False
 
-def save_student(student_data, name):
+def save_student(student_data: dict, name: str) -> bool:
     """ Update existing student file with new student data. 
         Used after modifying student data (answer question, end of quiz etc.) """
-    return
+    file_path = os.path.join(DATA_DIR, f"student_{name}.json")
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(student_data, f, indent=4)
+    return True
 
-def load_student(name):
+def load_student(name: str) -> dict:
     """ Retrieve student info from JSON file.
         Used when student data needs to be accessed. """
-    return
+    file_path = os.path.join(DATA_DIR, f"student_{name}.json")
+    return json.load(file_path)
 
-def create_new_student_file(name, email):
+def create_new_student_file(name: str, email: str) -> bool:
     """ Create new student profile locally. 
         Used when new student registers. """
+    if student_exists(name):
+        return False
     new_student = {
         "name": name,
         "email": email,
@@ -82,28 +91,41 @@ def create_new_student_file(name, email):
     file_path = os.path.join(DATA_DIR, f"student_{name}.json")
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(new_student, f, indent=4)
+    return True
 
-def update_student_email(name, new_email):
+def update_student_email(name: str, new_email: str) -> bool:
     """ Update student email. 
         Used when changing email in settings. """
-    return
+    student = load_student(name)
+    student["email"] = new_email
+    save_student(student, name)
+    return True
 
-def delete_student(name):
+def delete_student(name: str) -> bool:
     """ Delete student JSON file.
         Used for testing. """
-    return
+    file_path = os.path.join(DATA_DIR, f"student_{name}.json")
+    os.remove(file_path)
+    return True
 
-def update_mastery(student, unit_name, section_name, new_score):
+def update_mastery(student: dict, unit_name: str, section: str, new_score: int) -> bool:
     """ Update students mastery for a given unit and section. 
         Used after student answers question, or for each question when quiz is graded. """
-    return
+    updated_student = student
+    updated_student["mastery"][unit_name]["sections"][section] = new_score
+    save_student(updated_student, student["name"])
+    return True
 
-def calculate_overall_unit_mastery(student, unit_name):
+def calculate_overall_unit_mastery(student: dict, unit_name: str) -> int:
     """ Recalculates overall unit mastery. 
         Used when student does a quiz or practice for a specific section. """
-    return
+    overall_mastery = 0
+    unit_sections = student["mastery"][unit_name]["sections"]
+    for section_mastery in unit_sections.values():
+        overall_mastery += section_mastery
+    return overall_mastery / unit_sections.length()
 
-def generate_question(student, unit_name, section_name):
+def generate_question(student, unit_name, section):
     """ Generate question based on student information and topic.
         Used for practice mode, or when generating quiz. """
     return
@@ -121,7 +143,7 @@ def grade_question(student, question_id, submitted_answer):
         Takes note of response time and saves results for student metrics and question generation. """
     return
 
-def start_practice_session(student, unit_name, section_name):
+def start_practice_session(student: dict, unit_name: str, section: str) -> bool:
     """ Begins a practice session by generating a question, and 
         initializes current session details in file. 
         Used when student starts a practice session for a unit/section. """
@@ -133,7 +155,7 @@ def end_practice_session(student):
         Used when student exits a practice session. """
     return
 
-def generate_quiz(student, unit_name, section_name):
+def generate_quiz(student, unit_name, section):
     """ Generates quiz object based on student information and topic. 
         Used when student attemps to start a quiz, stores in quiz history. """
     return

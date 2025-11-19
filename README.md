@@ -1,48 +1,120 @@
-# BitByBit – Grade 9 Math Tutor
+BitByBit – Grade 9 Math Tutor
 
-BitByBit is an intelligent tutoring system focused on Grade 9 math. It ships a polished student experience (home dashboard, units, history, profile) alongside a teacher-facing overview that surfaces mastery, hint usage, and units that need attention. The goal of this sprint was to harden the MVP so the frontend can be deployed to Vercel without additional code changes.
+BitByBit is an intelligent tutoring system designed for Grade 9 math.
+It provides a polished student learning experience along with a teacher analytics dashboard.
+The project runs fully offline using seed demo data and includes a lightweight machine learning layer for personalized recommendations.
 
-## Running locally
+⸻
 
-### Backend (Flask API)
-1. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-2. Install Python dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Export the Flask entry point (and optional dev settings), then run the server:
-   ```bash
-   export FLASK_APP=src.backend.main:create_app
-   export FLASK_ENV=development  # optional, enables auto-reload
-   flask run --reload
-   ```
-   The API listens on `http://127.0.0.1:5000` and is CORS-enabled for the Vite dev server.
+Running the Project Locally
 
-### Frontend (Vite + React)
-1. Install dependencies:
-   ```bash
-   cd src/frontend
-   npm install
-   ```
-2. Start the dev server (defaults to `http://127.0.0.1:5173`):
-   ```bash
-   npm run dev
-   ```
-   The frontend proxies API calls to the Flask app above.
+This section contains the correct instructions that match exactly how the project actually runs.
 
-## Demo accounts
-- **Student:** `student@example.com` / `password123`
-- **Teacher:** `teacher@example.com` / `password123`
+⸻
 
-Sign in at `/login` for both roles. After logging in, student dashboards live at `/` and teacher analytics at `/teacher`.
+Backend (Flask API)
 
-## Main features
-- **Student Home dashboard** – avatar greeting, recent activity strip, suggested next step logic, and quick navigation into units, history, and profile.
-- **Units explorer & detail pages** – diagnostics, section previews, mastery bars, and actionable buttons with consistent loading/error/empty states.
-- **History page** – sortable/filterable attempt table with chart, hint-usage helper text, and rich error handling.
-- **Profile & avatar preview** – Ready Player Me placeholder, developer avatar URL override, and a stubbed “Open avatar editor” call-to-action.
-- **Teacher overview** – summary cards, students table with hint usage/mastory tooltips, unit tiles that flag high hint usage or zero attempts, and a “Units that need attention” highlight plus student detail drawer chips.
+1. Navigate to the backend folder
+cd ~/Desktop/project-setup-bitbybit/src
+
+2. Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+3. Install backend dependencies
+pip install flask flask-cors python-dotenv
+
+4. Start the backend server
+python -m backend.main
+
+The backend runs at:
+http://127.0.0.1:5000
+
+No additional configuration needed.
+No requirements.txt needed.
+No environment variables required.
+
+⸻
+
+Frontend (Vite + React)
+
+1. Navigate to the frontend folder
+cd ~/Desktop/project-setup-bitbybit/src/frontend
+
+2. Install Node dependencies
+npm install
+
+3. Start the Vite dev server
+npm run dev
+
+The frontend runs at:
+http://localhost:5173
+
+It automatically connects to the Flask backend at port 5000.
+
+⸻
+
+Demo Accounts
+
+The system uses pre-seeded demo logins.
+No user creation is required.
+
+Student
+student@example.com
+password: password123
+
+Teacher
+teacher@example.com
+password: password123
+
+After logging in:
+	•	Students start at /
+	•	Teachers start at /teacher
+
+⸻
+
+Main Features
+
+Student Experience
+	•	Home dashboard with:
+	•	Full-body avatar
+	•	ML-powered next recommended activity
+	•	Recent attempts
+	•	Overall mastery summary
+	•	Units:
+	•	Unit list + section list
+	•	Diagnostic quiz
+	•	Section-based mini quizzes
+	•	Practice quizzes
+	•	Full unit test
+	•	Review and results pages with personalized feedback + difficulty insights
+	•	History (charts, attempts list, scores)
+	•	Profile:
+	•	Ready Player Me avatar integration
+	•	Custom avatar URL support
+	•	Full avatar preview
+
+⸻
+
+Teacher Dashboard
+	•	Class overview with:
+	•	Student mastery levels
+	•	Hint usage
+	•	Difficult units
+	•	Detailed student drawer
+	•	Unit insights panel
+	•	Attempts breakdown
+
+⸻
+
+Machine Learning Layer
+
+(BitByBit includes lightweight ML logic using seed data.)
+	•	Difficulty Estimation
+Based on p(correct) with smoothing and optional response-time signals.
+	•	Knowledge Tracing
+Per-skill mastery tracking updated after every attempt.
+	•	Next-Activity Recommendation
+Picks the best next quiz/activity based on weak skills and difficulty targeting.
+	•	Personalized Feedback
+Short learning messages generated for diagnostics, practice, mini quizzes, and unit tests.

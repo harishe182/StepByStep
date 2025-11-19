@@ -1,120 +1,128 @@
-BitByBit – Grade 9 Math Tutor
+# BitByBit – Grade 9 Math Tutor
 
-BitByBit is an intelligent tutoring system designed for Grade 9 math.
-It provides a polished student learning experience along with a teacher analytics dashboard.
+BitByBit is an intelligent tutoring system designed for Grade 9 math.  
+It provides a polished student learning experience along with a teacher analytics dashboard.  
 The project runs fully offline using seed demo data and includes a lightweight machine learning layer for personalized recommendations.
 
-⸻
+---
 
-Running the Project Locally
+## Running the Project Locally
 
-This section contains the correct instructions that match exactly how the project actually runs.
+Below are the correct run instructions that match the actual project structure.
 
-⸻
+---
 
-Backend (Flask API)
+## Backend (Flask API)
 
-1. Navigate to the backend folder
+**1. Navigate to backend folder**
+```bash
 cd ~/Desktop/project-setup-bitbybit/src
+```
 
-2. Create and activate a virtual environment
+**2. Create and activate virtual environment**
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
-3. Install backend dependencies
+**3. Install backend dependencies**
+```bash
 pip install flask flask-cors python-dotenv
+```
 
-4. Start the backend server
+**4. Start backend server**
+```bash
 python -m backend.main
+```
 
-The backend runs at:
+Backend runs at:
+```
 http://127.0.0.1:5000
+```
 
-No additional configuration needed.
-No requirements.txt needed.
+No additional config needed.  
+No requirements.txt needed.  
 No environment variables required.
 
-⸻
+---
 
-Frontend (Vite + React)
+## Frontend (Vite + React)
 
-1. Navigate to the frontend folder
+**1. Navigate to frontend**
+```bash
 cd ~/Desktop/project-setup-bitbybit/src/frontend
+```
 
-2. Install Node dependencies
+**2. Install dependencies**
+```bash
 npm install
+```
 
-3. Start the Vite dev server
+**3. Start Vite dev server**
+```bash
 npm run dev
+```
 
-The frontend runs at:
+Frontend runs at:
+```
 http://localhost:5173
+```
 
 It automatically connects to the Flask backend at port 5000.
 
-⸻
+---
 
-Demo Accounts
+## Demo Accounts
 
-The system uses pre-seeded demo logins.
-No user creation is required.
+The system uses pre-seeded demo users.  
+No signup or account creation required.
 
-Student
-student@example.com
-password: password123
+### Student
+- email: `student@example.com`
+- password: `password123`
 
-Teacher
-teacher@example.com
-password: password123
+### Teacher
+- email: `teacher@example.com`
+- password: `password123`
 
 After logging in:
-	•	Students start at /
-	•	Teachers start at /teacher
+- Students start at `/`
+- Teachers start at `/teacher`
 
-⸻
+---
 
-Main Features
+## Main Features
 
-Student Experience
-	•	Home dashboard with:
-	•	Full-body avatar
-	•	ML-powered next recommended activity
-	•	Recent attempts
-	•	Overall mastery summary
-	•	Units:
-	•	Unit list + section list
-	•	Diagnostic quiz
-	•	Section-based mini quizzes
-	•	Practice quizzes
-	•	Full unit test
-	•	Review and results pages with personalized feedback + difficulty insights
-	•	History (charts, attempts list, scores)
-	•	Profile:
-	•	Ready Player Me avatar integration
-	•	Custom avatar URL support
-	•	Full avatar preview
+### Student Experience
+- Home dashboard with:
+  - Full-body avatar
+  - ML based next recommended activity
+  - Recent attempts
+  - Overall mastery summary
+- Units:
+  - Unit list and section list
+  - Diagnostic quiz
+  - Section mini quizzes
+  - Practice quizzes
+  - Full unit test
+  - Results pages with personalized feedback and difficulty insights
+- History page with charts, attempt logs, and scores
+- Profile page with Ready Player Me avatar support
 
-⸻
+---
 
-Teacher Dashboard
-	•	Class overview with:
-	•	Student mastery levels
-	•	Hint usage
-	•	Difficult units
-	•	Detailed student drawer
-	•	Unit insights panel
-	•	Attempts breakdown
+## Teacher Dashboard
+- Class overview with:
+  - Student mastery levels
+  - Hint usage
+  - Units needing attention
+- Detailed student drawer
+- Attempts breakdown panel
 
-⸻
+---
+- Diagnostics
+- Mini quizzes
+- Practice
+- Unit tests
 
-Machine Learning Layer
-
-(BitByBit includes lightweight ML logic using seed data.)
-	•	Difficulty Estimation
-Based on p(correct) with smoothing and optional response-time signals.
-	•	Knowledge Tracing
-Per-skill mastery tracking updated after every attempt.
-	•	Next-Activity Recommendation
-Picks the best next quiz/activity based on weak skills and difficulty targeting.
-	•	Personalized Feedback
-Short learning messages generated for diagnostics, practice, mini quizzes, and unit tests.
+---

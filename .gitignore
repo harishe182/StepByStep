@@ -3,12 +3,12 @@
 
 # Ignore local student information JSON. Student files created by program will be
 # of the form "student_<student_name>.json"
-/src/backend/data/student_*.json
+/src/backend/data/*.json
 
 # React frontend dependency files
 node_modules/
 */node_modules/
-src/backend/data/*.json
+
 # Python byte-code files and virtual environment files
 __pycache__/
 *.pyc

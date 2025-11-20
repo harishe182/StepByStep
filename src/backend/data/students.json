@@ -8,23 +8,23 @@
     "mastery_by_skill": {
       "distribute_combine": {
         "skill_id": "distribute_combine",
-        "correct": 1,
-        "total": 2
+        "correct": 2,
+        "total": 3
       },
       "solve_linear_one_step": {
         "skill_id": "solve_linear_one_step",
-        "correct": 4,
-        "total": 5
+        "correct": 5,
+        "total": 6
       },
       "solve_linear_two_step": {
         "skill_id": "solve_linear_two_step",
-        "correct": 1,
-        "total": 2
+        "correct": 2,
+        "total": 3
       },
       "linear_modeling": {
         "skill_id": "linear_modeling",
         "correct": 1,
-        "total": 2
+        "total": 3
       },
       "solve_linear_multi_step": {
         "skill_id": "solve_linear_multi_step",
@@ -34,23 +34,23 @@
     },
     "skill_mastery": {
       "distribute_combine": {
-        "p_mastery": 0.4275,
-        "n_observations": 2,
-        "recent_correct": 0
+        "p_mastery": 0.5706,
+        "n_observations": 3,
+        "recent_correct": 1
       },
       "solve_linear_one_step": {
-        "p_mastery": 0.7444,
-        "n_observations": 5,
-        "recent_correct": 2
+        "p_mastery": 0.8083,
+        "n_observations": 6,
+        "recent_correct": 3
       },
       "solve_linear_two_step": {
-        "p_mastery": 0.4275,
-        "n_observations": 2,
-        "recent_correct": 0
+        "p_mastery": 0.5706,
+        "n_observations": 3,
+        "recent_correct": 1
       },
       "linear_modeling": {
-        "p_mastery": 0.4275,
-        "n_observations": 2,
+        "p_mastery": 0.3847,
+        "n_observations": 3,
         "recent_correct": 0
       },
       "solve_linear_multi_step": {
@@ -60,8 +60,8 @@
       }
     },
     "last_unit_id": "algebra-1",
-    "last_section_id": "1.1",
-    "last_activity": "practice",
+    "last_section_id": null,
+    "last_activity": "unit_test",
     "avatar_url": "https://models.readyplayer.me/691a4ee21aa3af821ad7e2c7.glb",
     "avatar_name": "Debug avatar"
   }

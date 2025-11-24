@@ -1436,45 +1436,5 @@
         "used_hint": false
       }
     ]
-  },
-  {
-    "id": "46647e48-2a14-42af-b737-11ae571bb3bd",
-    "student_id": "student-1",
-    "quiz_id": "unit-alg-1",
-    "quiz_type": "unit_test",
-    "unit_id": "algebra-1",
-    "section_id": null,
-    "score_pct": 75.0,
-    "created_at": 1763585317.4343848,
-    "results": [
-      {
-        "question_id": "q13",
-        "correct": true,
-        "chosen_answer": "2x + 6",
-        "time_sec": 0.0,
-        "used_hint": false
-      },
-      {
-        "question_id": "q14",
-        "correct": true,
-        "chosen_answer": "True",
-        "time_sec": 0.0,
-        "used_hint": true
-      },
-      {
-        "question_id": "q15",
-        "correct": true,
-        "chosen_answer": "4",
-        "time_sec": 0.0,
-        "used_hint": false
-      },
-      {
-        "question_id": "q16",
-        "correct": false,
-        "chosen_answer": "$12 gym fee plus $5 monthly",
-        "time_sec": 0.0,
-        "used_hint": false
-      }
-    ]
   }
 ]
